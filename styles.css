@@ -14,12 +14,6 @@ body {
     padding: initial;
   }
   
-  .navbar-brand.mb-0.h1 {
-    font-size: 30px; /* Adjust the font size here */
-    line-height: 1.65; /* Maintain a fixed height for the header */
-    padding: initial;
-  }
-  
   #sidebar {
     position: fixed;
     top: -4px;
@@ -225,22 +219,6 @@ body {
   }
 
   @font-face {
-    font-family: 'dexter-font';
-    src: url('custom-fonts/dexter-font/dexter-font.woff2') format('woff2'),  /* Modern Browsers */
-         url('custom-fonts/dexter-font/dexter-font.woff') format('woff');    /* Older Browsers */
-    font-weight: normal;
-    font-style: normal;
-}
-
-  @font-face {
-    font-family: 'cheeky-rabbit';
-    src: url('custom-fonts/cheeky-rabbit/cheeky-rabbit.woff2') format('woff2'),  /* Modern Browsers */
-        url('custom-fonts/cheeky-rabbit/cheeky-rabbit.woff') format('woff');    /* Older Browsers */
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
     font-family: 'cubic-font';
     src: url('custom-fonts/cubic-font/cubic-font.woff2') format('woff2'),  /* Modern Browsers */
         url('custom-fonts/cubic-font/cubic-font.woff') format('woff');    /* Older Browsers */
@@ -249,37 +227,25 @@ body {
   }
 
   @font-face {
-    font-family: 'saiyan-sans';
-    src: url('custom-fonts/saiyan-sans/saiyan-sans.woff2') format('woff2'),  /* Modern Browsers */
-        url('custom-fonts/saiyan-sans/saiyan-sans.woff') format('woff');    /* Older Browsers */
+    font-family: 'squid';
+    src: url('custom-fonts/squid/squid.woff2') format('woff2'),  /* Modern Browsers */
+        url('custom-fonts/squid/squid.woff') format('woff');    /* Older Browsers */
     font-weight: normal;
     font-style: normal;
   }
-
-  @font-face {
-    font-family: 'samarkan-font';
-    src: url('custom-fonts/samarkan-font/samarkan-font.woff2') format('woff2'),  /* Modern Browsers */
-        url('custom-fonts/samarakan-font/samarkan-font.woff') format('woff');    /* Older Browsers */
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  .dexter-font {
-    font-family: 'dexter-font', sans-serif;
-  }
-
-  .cheeky-rabbit {
-    font-family: 'cheeky-rabbit', sans-serif;
-  }
-
+  
   .cubic-font {
     font-family: 'cubic-font', sans-serif;
+    font-size: 30px;
+    line-height: 2;
+    padding: initial;
+    color: #ffffff;
   }
 
-  .saiyan-sans {
-    font-family: 'saiyan-sans', sans-serif;
-  }
-
-  .samarkan-font {
-    font-family: 'samarkan-font', sans-serif;
+  .squid {
+    font-family: 'squid', sans-serif;
+    font-size: 30px;
+    line-height: 2;
+    padding: initial;
+    color: #ffffff;
   }
