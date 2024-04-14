@@ -58,6 +58,7 @@ body {
   }
   
   .sidebar-menu li a:hover {
+    color: rgb(234, 240, 245);
     background-color: rgb(40, 94, 148);
   }
   
@@ -115,7 +116,7 @@ body {
   }
   
   .about-site.dark-mode {
-    background-color: #001f3f; /* Dark red background color for dark mode */
+    background-color: rgb(77, 77, 83); /* Dark red background color for dark mode */
   }
   
   .about-site-content {
@@ -133,6 +134,11 @@ body {
   
   .blue-text {
     color: rgb(24, 24, 116); /* Blue color for text */
+  }
+
+  .blue-text.dark-mode {
+    color: rgb(206, 206, 250); /* Blue color for text */
+    background-color: rgb(77, 77, 83);
   }
 
   .footer {
@@ -167,6 +173,14 @@ body {
     transform: scale(0.95); /* Add a slight scale effect on click */
   }
   
+  .dark-mode a {
+    color: rgb(122, 239, 254); /* change 'blue' to any color you want */
+  }
+
+  .dark-mode a:hover {
+    color: rgb(68, 169, 183); /* change 'blue' to any color you want */
+  }
+
   @media screen and (max-width: 768px) {
     .content {
       margin-left: 0;
@@ -218,54 +232,54 @@ body {
     font-style: normal;
 }
 
-@font-face {
-  font-family: 'cheeky-rabbit';
-  src: url('custom-fonts/cheeky-rabbit/cheeky-rabbit.woff2') format('woff2'),  /* Modern Browsers */
-       url('custom-fonts/cheeky-rabbit/cheeky-rabbit.woff') format('woff');    /* Older Browsers */
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'cheeky-rabbit';
+    src: url('custom-fonts/cheeky-rabbit/cheeky-rabbit.woff2') format('woff2'),  /* Modern Browsers */
+        url('custom-fonts/cheeky-rabbit/cheeky-rabbit.woff') format('woff');    /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'cubic-font';
-  src: url('custom-fonts/cubic-font/cubic-font.woff2') format('woff2'),  /* Modern Browsers */
-       url('custom-fonts/cubic-font/cubic-font.woff') format('woff');    /* Older Browsers */
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'cubic-font';
+    src: url('custom-fonts/cubic-font/cubic-font.woff2') format('woff2'),  /* Modern Browsers */
+        url('custom-fonts/cubic-font/cubic-font.woff') format('woff');    /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'saiyan-sans';
-  src: url('custom-fonts/saiyan-sans/saiyan-sans.woff2') format('woff2'),  /* Modern Browsers */
-       url('custom-fonts/saiyan-sans/saiyan-sans.woff') format('woff');    /* Older Browsers */
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'saiyan-sans';
+    src: url('custom-fonts/saiyan-sans/saiyan-sans.woff2') format('woff2'),  /* Modern Browsers */
+        url('custom-fonts/saiyan-sans/saiyan-sans.woff') format('woff');    /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'samarkan-font';
-  src: url('custom-fonts/samarkan-font/samarkan-font.woff2') format('woff2'),  /* Modern Browsers */
-       url('custom-fonts/samarakan-font/samarkan-font.woff') format('woff');    /* Older Browsers */
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'samarkan-font';
+    src: url('custom-fonts/samarkan-font/samarkan-font.woff2') format('woff2'),  /* Modern Browsers */
+        url('custom-fonts/samarakan-font/samarkan-font.woff') format('woff');    /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
 
-.dexter-font {
-  font-family: 'dexter-font', sans-serif;
-}
+  .dexter-font {
+    font-family: 'dexter-font', sans-serif;
+  }
 
-.cheeky-rabbit {
-  font-family: 'cheeky-rabbit', sans-serif;
-}
+  .cheeky-rabbit {
+    font-family: 'cheeky-rabbit', sans-serif;
+  }
 
-.cubic-font {
-  font-family: 'cubic-font', sans-serif;
-}
+  .cubic-font {
+    font-family: 'cubic-font', sans-serif;
+  }
 
-.saiyan-sans {
-  font-family: 'saiyan-sans', sans-serif;
-}
+  .saiyan-sans {
+    font-family: 'saiyan-sans', sans-serif;
+  }
 
-.samarkan-font {
-  font-family: 'samarkan-font', sans-serif;
-}
+  .samarkan-font {
+    font-family: 'samarkan-font', sans-serif;
+  }
