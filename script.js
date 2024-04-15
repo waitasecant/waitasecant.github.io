@@ -10,8 +10,8 @@ function enableDarkMode() {
   var body = document.body;
   body.classList.toggle("dark-mode");
   updateDarkModeButton();
-  updateAboutSiteStyle(body.classList.contains("dark-mode")); // Call function to update About Me style
-  updateBlueText(body.classList.contains("dark-mode")); // Call function to update About Me style
+  updateAboutSiteStyle(body.classList.contains("dark-mode"));
+  updateBlueText(body.classList.contains("dark-mode"));
 
 }
 
@@ -20,8 +20,8 @@ function disableDarkMode() {
   var body = document.body;
   body.classList.toggle("dark-mode");
   updateDarkModeButton();
-  updateAboutSiteStyle(body.classList.contains("dark-mode")); // Call function to update About Me style
-  updateBlueText(body.classList.contains("dark-mode")); // Call function to update About Me style
+  updateAboutSiteStyle(body.classList.contains("dark-mode"));
+  updateBlueText(body.classList.contains("dark-mode"));
 
 }
 
