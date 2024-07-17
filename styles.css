@@ -220,3 +220,58 @@ body {
   .container {
     padding: 2px 16px;
   }
+
+/* form{
+  max-width:500px;
+}
+
+.feedback-input {
+  color:rgb(29, 27, 27);
+  font-size: 20px;
+  border-radius: 2px;
+  line-height: 10px;
+  background-color: transparent;
+  border:1px solid #312f2f;
+  transition: all 0s;
+  padding: 8px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing:border-box;
+  outline:0;
+  max-height: 300px;
+}
+
+.feedback-input:focus { border:2px solid #8b8787; }
+
+textarea {
+  height: 200px;
+  min-height: 300px;
+  line-height: 100%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  line-height: 40px;
+  background:rgb(52, 58, 64);
+  border-radius:2px;
+  color:white;
+  font-size:22px;
+  transition: all 0.1s;
+}
+
+.feedback-input.error {
+  border-color: red;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+} */
