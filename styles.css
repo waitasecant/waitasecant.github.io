@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    font-family: "Computer Modern Sans", sans-serif;
+    font-family: 'Book Antiqua';
     font-size: 22px;
     position: relative;
     padding-top: 56px;
@@ -147,6 +147,10 @@ body {
     display: none;
     z-index: 999;
     
+  }
+
+  p{
+    text-align: justify;
   }
 
   a {
