@@ -57,7 +57,7 @@ body {
   }
   
   #sidebar.active .sidebar-menu li {
-    border-left-color: rgb(0, 0, 0);
+    border-left-color: #333;
   }
   
   .close-btn {
