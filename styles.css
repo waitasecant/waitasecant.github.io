@@ -1,4 +1,10 @@
 /* Design fot media queries */
+@media (min-width: 1200px) {
+  .days {
+    padding: 20px 0px 0px 0px;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 80%;
@@ -13,10 +19,13 @@
 
   .months {
     display: flex;
-    font-size: 10px;
     padding-left: 10px;
     overflow-x:visible;
     white-space: nowrap;
+  }
+
+  .days {
+    padding: 0px 0px 5px 0px;
   }
 }
 
@@ -34,8 +43,8 @@
 
 /* Design for all the pages */
 body {
-  font-family: "Consolas", sans-serif;
-  font-size: 21px;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 19px;
   line-height: 1.5;
   background: #ffffff;
   max-width: 1100px;
@@ -49,6 +58,7 @@ ul {
   
 li {
   margin-top: 0px;
+  font-family: "Roboto Mono", sans-serif;
 }
   
 a {
@@ -75,26 +85,30 @@ a.social {
 }
 
 p {
-  text-align: justify;
+    text-align: justify;
 }
 
 .main {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .left {
-text-align: left;
+  text-align: left;
 }
 
 .right {
-text-align: right;
+  text-align: right;
 }
 
-.footer {
-font-size: 15px;
-text-align: center;
-margin-top: 40px;
+footer {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 40px;
+  position:fixed;
+  bottom: 40px;
+  left: 0;
+  right: 0;
 }
 
 /* Design for the running page */
@@ -129,10 +143,10 @@ margin-top: 40px;
 }
 
 .days {
-grid-area: days;
-padding: 20px 0px 0px 0px;
-margin: 0px;
-grid-template-rows: repeat(7, var(--square-size));
+  grid-area: days;
+  /* padding: 20px 0px 0px 0px; */
+  margin: 0px;
+  grid-template-rows: repeat(7, var(--square-size));
 }
 
 .squares {
@@ -147,89 +161,89 @@ grid-template-rows: repeat(7, var(--square-size));
 }
 
 .months {
-grid-area: months;
-display: grid;
-margin: 1px;
-padding: 0px 0px 0px 60px;
-grid-template-columns: calc(var(--week-width) * 4) /* Jan */
-                        calc(var(--week-width) * 4) /* Feb */
-                        calc(var(--week-width) * 4) /* Mar */
-                        calc(var(--week-width) * 5) /* Apr */
-                        calc(var(--week-width) * 4) /* May */
-                        calc(var(--week-width) * 4) /* Jun */
-                        calc(var(--week-width) * 5) /* Jul */
-                        calc(var(--week-width) * 4) /* Aug */
-                        calc(var(--week-width) * 4) /* Sep */
-                        calc(var(--week-width) * 5) /* Oct */
-                        calc(var(--week-width) * 4) /* Nov */
-                        calc(var(--week-width) * 5) /* Dec */;
+  grid-area: months;
+  display: grid;
+  margin: 1px;
+  padding: 0px 0px 0px 60px;
+  grid-template-columns: calc(var(--week-width) * 4) /* Jan */
+                          calc(var(--week-width) * 4) /* Feb */
+                          calc(var(--week-width) * 4) /* Mar */
+                          calc(var(--week-width) * 5) /* Apr */
+                          calc(var(--week-width) * 4) /* May */
+                          calc(var(--week-width) * 4) /* Jun */
+                          calc(var(--week-width) * 5) /* Jul */
+                          calc(var(--week-width) * 4) /* Aug */
+                          calc(var(--week-width) * 4) /* Sep */
+                          calc(var(--week-width) * 5) /* Oct */
+                          calc(var(--week-width) * 4) /* Nov */
+                          calc(var(--week-width) * 5) /* Dec */;
 }
 
 .days li:nth-child(even) {
-visibility: hidden;
+  visibility: hidden;
 }
 
 .days li {
-margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .squares li {
-background-color: #ffffff;
-transition: background-color 0.3s ease;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
 }
 
 .squares li[data-level="5"] {
-background-color: #ff7b00;
+  background-color: #ff7b00;
 }
 
 .squares li[data-level="4"] {
-background-color: #ff8d21;
+  background-color: #ff8d21;
 }
 
 .squares li[data-level="3"] {
-background-color: #ffa652;
+  background-color: #ffa652;
 }
 
 .squares li[data-level="2"] {
-background-color: #ffb76b;
+  background-color: #ffb76b;
 }
 
 .squares li[data-level="1"] {
-background-color: #ffcd90;
+  background-color: #ffcd90;
 }
 
 .squares li[data-level="0"] {
-background-color: #edebeb;
-transition: background-color 0.3s ease;
+  background-color: #edebeb;
+  transition: background-color 0.3s ease;
 }
 
 #tooltip {
-position: absolute;
-background-color: #555;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 0;
-z-index: 1;
-bottom: 125%;
-left: 50%;
-margin-left: -60px;
-opacity: 0;
-transition: opacity 0.3s;
+  position: absolute;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 #tooltip::after {
-content: "";
-position: absolute;
-top: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: #555 transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
 .squares li:hover #tooltip {
-visibility: visible;
-opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
