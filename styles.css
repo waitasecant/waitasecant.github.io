@@ -35,9 +35,20 @@
     margin: auto;
   }
 
-  .right {
-    position: absolute;
-    top: 5vh;
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+  }
+
+  .left h1 {
+    line-height: .8;
+    padding: 45px 0px 10px 0px;
+  }
+
+  .right h1 {
+    line-height: .5;
+    padding: 10px 0px 0px 0px;
   }
 }
 
