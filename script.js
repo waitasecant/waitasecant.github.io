@@ -26,7 +26,7 @@ function isRun(x){
 }
 // -----------------------------------------------------------------------------------
 // Data for 2025
-myList25 = [['01-01-2025', 0, 0], ['02-01-2025', 0, 0], ['03-01-2025', 0, 0],
+const myList25 = [['01-01-2025', 0, 0], ['02-01-2025', 0, 0], ['03-01-2025', 0, 0],
             ['04-01-2025', 0, 0], ['05-01-2025', 0, 0], ['06-01-2025', 0, 0],
             ['07-01-2025', 0, 0], ['08-01-2025', 0, 0], ['09-01-2025', 0, 0],
             ['10-01-2025', 0, 0], ['11-01-2025', 0, 0], ['12-01-2025', 0, 0],
@@ -58,8 +58,8 @@ myList25 = [['01-01-2025', 0, 0], ['02-01-2025', 0, 0], ['03-01-2025', 0, 0],
             ['19-03-2025', 0, 0], ['20-03-2025', 0, 0], ['21-03-2025', 0, 0],
             ['22-03-2025', 0, 0], ['23-03-2025', 0, 0], ['24-03-2025', 0, 0],
             ['25-03-2025', 0, 0], ['26-03-2025', 0, 0], ['27-03-2025', 0, 0],
-            ['28-03-2025', 0, 0], ['29-03-2025', 0, 0], ['30-03-2025', 0, 0],
-            ['31-03-2025', 0, 0],
+            ['28-03-2025', 4, 27], ['29-03-2025', 0, 0], ['30-03-2025', 0, 0],
+            ['31-03-2025', 5, 30],
 
             ['01-04-2025', 0, 0], ['02-04-2025', 0, 0], ['03-04-2025', 0, 0],
             ['04-04-2025', 0, 0], ['05-04-2025', 0, 0], ['06-04-2025', 0, 0],
@@ -165,11 +165,16 @@ myList25 = [['01-01-2025', 0, 0], ['02-01-2025', 0, 0], ['03-01-2025', 0, 0],
             ['28-12-2025', 0, 0], ['29-12-2025', 0, 0], ['30-12-2025', 0, 0],
             ['31-12-2025', 0, 0]];
 
+const dateLinks = {
+  "28-03-2025": "https://www.strava.com/activities/14012048774",
+  "31-03-2025": "https://www.strava.com/activities/14038618510",
+};
+            
 // For text giving details of the year
 let sum25run = myList25.reduce((total, val) => total + isRun(val[1]), 0);
 let sum25km = myList25.reduce((total, val) => total + val[1], 0);
 let sum25min = myList25.reduce((total, val) => total + val[2], 0);
-document.getElementById('sum25').textContent = `${sum25run} runs this year for a total of ${Math.round(sum25km*100)/100} km clocking ${Math.round(sum25min/60)}h ${sum25min%60}m`;
+document.getElementById('sum25').textContent = `${sum25run} runs this year for a total of ${Math.round(sum25km*100)/100} km clocking ${Math.floor(sum25min/60)}h ${sum25min%60}m`;
 
 // -1 for adding empty sqaures as an offset for the starting week 
 for(let i of [-1,-1]) {
@@ -184,6 +189,16 @@ for(let i of myList25) {
   let li = document.createElement('li');
   li.dataset.level = level25;
   li.title = "Date: " + i[0] + "\n" + "Distance: " + i[1] + " km";
+
+  if (i[1] > 0) {
+    if (dateLinks[i[0]]) {
+      li.style.cursor = "pointer";
+      li.addEventListener("click", function () {
+        window.open(dateLinks[i[0]], "_blank");
+      });
+    }
+  }
+
   squares25.appendChild(li);
 }
 
