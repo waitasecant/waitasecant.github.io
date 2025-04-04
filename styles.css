@@ -198,24 +198,46 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+/* https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08 */
+
+.squares li[data-level="10"] {
+  background-color: #03071E;
+}
+
+.squares li[data-level="9"] {
+  background-color: #370617;
+}
+
+.squares li[data-level="8"] {
+  background-color: #6A040F;
+}
+
+.squares li[data-level="7"] {
+  background-color: #9D0208;
+}
+
+.squares li[data-level="6"] {
+  background-color: #D00000;
+}
+
 .squares li[data-level="5"] {
-  background-color: #ff7b00;
+  background-color: #DC2F02;
 }
 
 .squares li[data-level="4"] {
-  background-color: #ff8d21;
+  background-color: #E85D04;
 }
 
 .squares li[data-level="3"] {
-  background-color: #ffa652;
+  background-color: #F48C06;
 }
 
 .squares li[data-level="2"] {
-  background-color: #ffb76b;
+  background-color: #FAA307;
 }
 
 .squares li[data-level="1"] {
-  background-color: #ffcd90;
+  background-color: #FFBA08;
 }
 
 .squares li[data-level="0"] {
