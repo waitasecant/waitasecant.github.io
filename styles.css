@@ -275,3 +275,13 @@ footer {
   visibility: visible;
   opacity: 1;
 }
+
+::-moz-selection {
+  color: #ffffff;
+  background: #2A6EA6;
+}
+
+::selection {
+  color: #ffffff;
+  background: #2A6EA6;
+}
