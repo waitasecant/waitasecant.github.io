@@ -111,10 +111,24 @@ p {
   text-align: right;
 }
 
+.left h1 {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 footer {
   font-size: 15px;
   text-align: center;
   margin: 40px 0px 40px 0px;
+}
+
+footer a {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* Design for the running page */
