@@ -11,6 +11,11 @@
     margin: auto;
   }
 
+  .container-score {
+    max-width: 90%;
+    margin: auto;
+  }
+
   .graph {
     display: flex;
     flex-direction: column;
@@ -31,6 +36,11 @@
 
 @media (max-width: 568px) {
   .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .container-score {
     max-width: 90%;
     margin: auto;
   }
@@ -60,6 +70,14 @@ body {
   background: #ffffff;
   max-width: 1190px;
   margin: auto;
+}
+
+body.p404 {
+  background-image: url("https://a.slack-edge.com/80588/img/404/marrakesh-meadow-80.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 ul {
@@ -101,6 +119,19 @@ p {
 .main {
     display: flex;
     justify-content: space-between;
+}
+
+.main-404{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .left {
@@ -298,4 +329,16 @@ footer a {
 ::selection {
   color: #ffffff;
   background: #2A6EA6;
+}
+
+.container-score {
+  text-align: center;
+  align-items: center;
+  background: #ffffff;
+  opacity: .8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+  width: 650px;
+  margin: 20px 20px 20px 20px;
 }
