@@ -11,7 +11,7 @@
     margin: auto;
   }
 
-  .container-score {
+  .container-404 {
     max-width: 90%;
     margin: auto;
   }
@@ -40,7 +40,7 @@
     margin: auto;
   }
 
-  .container-score {
+  .container-404 {
     max-width: 90%;
     margin: auto;
   }
@@ -76,8 +76,14 @@ body.p404 {
   background-image: url("https://a.slack-edge.com/80588/img/404/marrakesh-meadow-80.jpg");
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100vh;
+  
+  margin: 0;
+  max-width: none;
+  position: relative;
+  transition: background-position 0.1s ease-out;
 }
 
 ul {
@@ -331,7 +337,7 @@ footer a {
   background: #2A6EA6;
 }
 
-.container-score {
+.container-404 {
   text-align: center;
   align-items: center;
   background: #ffffff;
