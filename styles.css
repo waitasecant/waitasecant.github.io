@@ -1,11 +1,11 @@
 /* Design fot media queries */
-@media (min-width: 1200px) {
+@media (min-width: 950px) {
   .days {
-    padding: 20px 0px 0px 0px;
+    padding: 14px 0px 0px 0px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 950px) {
   .container {
     max-width: 80%;
     margin: auto;
@@ -30,7 +30,7 @@
   }
 
   .days {
-    padding: 0px 0px 5px 0px;
+    padding: 0px 0px 6px 0px;
   }
 }
 
@@ -65,10 +65,10 @@
 /* Design for all the pages */
 body {
   font-family: "Roboto Mono", sans-serif;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.5;
   background: #ffffff;
-  max-width: 1190px;
+  max-width: 850px;
   margin: auto;
 }
 
@@ -93,6 +93,7 @@ ul {
 li {
   margin-top: 0px;
   font-family: "Roboto Mono", sans-serif;
+  font-size: 17px;
 }
   
 a {
@@ -156,7 +157,7 @@ p {
 }
 
 footer {
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   margin: 40px 0px 40px 0px;
 }
@@ -170,13 +171,13 @@ footer a {
 
 /* Design for the running page */
 :root {
-  --square-size: 15px;
-  --square-gap: 5px;
+  --square-size: 11px;
+  --square-gap: 3px;
   --week-width: calc(var(--square-size) + var(--square-gap));
   }
 
 .graph {
-  padding: 20px;
+  padding: 15px;
   border: 1px #e1e4e8 solid;
   margin: 10px 10px 10px 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -221,7 +222,7 @@ footer a {
   grid-area: months;
   display: grid;
   margin: 1px;
-  padding: 0px 0px 0px 60px;
+  padding: 0px 0px 0px 45px;
   grid-template-columns: calc(var(--week-width) * 4) /* Jan */
                           calc(var(--week-width) * 4) /* Feb */
                           calc(var(--week-width) * 4) /* Mar */
@@ -241,7 +242,7 @@ footer a {
 }
 
 .days li {
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .squares li {
@@ -293,7 +294,6 @@ footer a {
 
 .squares li[data-level="0"] {
   background-color: #edebeb;
-  transition: background-color 0.3s ease;
 }
 
 #tooltip {
