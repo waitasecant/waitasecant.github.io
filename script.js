@@ -87,6 +87,9 @@ fetch('/running/data.json')
 
 document.addEventListener('DOMContentLoaded', function() {
   const body = document.querySelector('body.p404');
+  if (!body) {
+    return; // Skip the animation completely for pages without the p404 class
+  }
   const maxSpeed = 0.5; // Maximum speed of background movement per frame
   const deadZoneWidth = 100; // pixels around center where no movement occurs
   let isMouseOver = false;
