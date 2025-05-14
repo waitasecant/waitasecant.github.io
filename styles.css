@@ -119,8 +119,19 @@ a.social {
   text-align: right;
 }
 
+a.a-blog-page-entry {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
+a.a-blog-page-entry:hover .blog-page-entry {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 p {
     text-align: justify;
+    overflow-wrap: break-word;
 }
 
 .main {
@@ -347,4 +358,114 @@ footer a {
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
   width: 650px;
   margin: 20px 20px 20px 20px;
+}
+
+/*Blogs*/
+.blog-page-entry {
+  text-align: justify;
+  background: #f1f1f1;
+  padding: 2px 25px 5px 25px;
+  border-radius: 8px;
+  margin: 25px 0px;
+  max-width: 850px;
+  user-select: none;
+}
+
+.blog-page-title {
+  font-size: 18px;
+  margin: 10px 0px 10px 0px;
+}
+
+.blog-page-summary {
+  font-size: 14px;
+  margin: 10px 0px 10px 0px;
+}
+
+.blog-page-meta {
+  font-style: italic;
+  font-size: 13px;
+}
+
+.blog-title {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.blog-meta {
+  font-style: italic;
+  font-size: 15px;
+  margin: 5px 0px 5px 0px;
+}
+
+.tags-container {
+  margin: 0px 0px;
+  padding: 5px 25px;
+}
+
+#tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 5px 0px;
+}
+
+.filter-tag {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #525252;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.filter-tag:hover {
+  background-color: #cacaca;
+}
+
+.filter-tag.selected {
+  background-color: #747474;
+  color: white;
+}
+
+.blog-page-tags {
+  margin: 2px 0px 8px 0px;
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 10px;
+    
+}
+
+.blog-page-tag {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #525252;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.blog-tags {
+  margin: 10px 0px 25px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.blog-tag {
+  display: inline-block;
+  background-color: #f1f1f1;
+  color: #525252;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: default;
+}
+
+.blog-tag:hover {
+  background-color: #e0e0e0;
 }
