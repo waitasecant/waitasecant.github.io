@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Process content
         if (contentElement) {
           const fullText = contentElement.textContent.trim();
-          let summary = fullText.substring(0, 187);
+          let summary = fullText.substring(0, 177);
           summary += '...';
           summaryElement.textContent = summary;
         } else {
