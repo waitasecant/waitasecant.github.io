@@ -679,6 +679,13 @@ details.math-content {
   -webkit-user-select: none;
 }
 
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 0.5em 0;
+}
+
 /* Table */
 .table-container {
     max-width: 100%;
