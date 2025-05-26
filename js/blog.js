@@ -136,6 +136,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show the entry only if all required content was found
         if (hasAllRequiredContent) {
           entry.style.display = '';
+          
+          if (window.renderMathInElement) {
+            renderMathInElement(entry, {
+              delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\[', right: '\\]', display: true},
+                {left: '\\(', right: '\\)', display: false}
+              ],
+              throwOnError: false
+            });
+          }
         } else {
           console.log(`Blog entry ${href} missing required content`);
         }
@@ -264,4 +276,52 @@ document.addEventListener('DOMContentLoaded', function() {
         
         removeTagsContainerIfNoVisibleEntries();
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const copyButtons = document.querySelectorAll('.copy-button');
+    
+    copyButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const codeContainer = this.closest('.code-container');
+        const codeBlock = codeContainer.querySelector('code');
+        
+        navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+          // Success - show checkmark
+          this.classList.add('copied');
+          
+          // Reset after 2 seconds
+          setTimeout(() => {
+            this.classList.remove('copied');
+          }, 2000);
+        }).catch(err => {
+          console.error('Failed to copy: ', err);
+          
+          // Fallback for older browsers
+          const textarea = document.createElement('textarea');
+          textarea.value = codeBlock.textContent;
+          textarea.style.position = 'fixed';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          
+          this.classList.add('copied');
+          setTimeout(() => {
+            this.classList.remove('copied');
+          }, 2000);
+        });
+      });
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", function() {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false},
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });
 });

@@ -1,15 +1,21 @@
-<!-- blogs/index.html -->
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Himanshu - Blogs</title>
+  <title>Himanshu - Blog</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
   <link rel="icon" href="https://img.icons8.com/?size=100&id=7gn1JUOaj7KZ&format=png&color=000000" type="image/png">
-  
+  <script src="/js/blog.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/polyfill/3.111.0/polyfill.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/stackoverflow-light.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 </head>
 
 <body>
@@ -23,13 +29,13 @@
       </span>
   </div>
 
-  <h2>Welcome to my Blogs</h2>
+  <h2>Welcome to my Blog</h2>
 
   <div class="blog-page-entry tags-container">
     <div id="tags-list"></div>
   </div>
 
-  <a class="a-blog-page-entry" href="/blogs/test/index.html" target="_blank">
+  <a class="a-blog-page-entry" href="/blog/cleanlab-saves-the-day-an-implementation/" target="_blank">
     <div class="blog-page-entry">
       <h3 class="blog-page-title" data-required="true"></h3>
       <p class="blog-page-summary" data-required="true"></p>
@@ -40,10 +46,8 @@
 </div>
 
 <footer>
-  <a href="/open-source" style="margin: 0px 20px 0px 20px; color: dimgrey; text-decoration: none;" target="_blank">Open Source</a><a href="/blogs" style="margin: 0px 20px 0px 20px; color: dimgrey; text-decoration: none;" target="_blank">Blogs</a><a href="/running" style="margin: 0px 20px 0px 20px; color: dimgrey; text-decoration: none;" target="_blank">Running</a>
+  <a href="/open-source" style="margin: 0px 20px 0px 20px; color: dimgrey; text-decoration: none;" target="_blank">Open Source</a><a href="/blog" style="margin: 0px 20px 0px 20px; color: dimgrey; text-decoration: none;" target="_blank">Blog</a><a href="/running" style="margin: 0px 20px 0px 20px; color: dimgrey; text-decoration: none;" target="_blank">Running</a>
 </footer>
-
-<script src="/js/blogs.js"></script>
 
 </body>
 </html>

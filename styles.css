@@ -510,6 +510,19 @@ footer a {
   margin: 15px 0px 15px 0px;
 }
 
+.blog-content code {
+  padding: 2px 2px;
+  font-size: 15px;
+}
+
+.blog-content p code {
+  background: #f1f1f1;
+}
+
+.blog-content li code {
+  background: #f1f1f1;
+}
+
 /* Table of contents */
 details {
   text-align: justify;
@@ -531,12 +544,23 @@ details {
 
 .inner ul {
   color: dimgrey;
-  list-style: ">";
+  list-style: "> ";
   padding-left: 20px;
 }
 
 .inner ul:hover {
   color: #363636;
+}
+
+.blog-content ul {
+  list-style: "> ";
+  padding-left: 20px;
+  margin: 10px 0px;
+}
+
+.blog-content ul li {
+  font-size: 15px;
+  margin: 5px 0px;
 }
 
 summary {
@@ -546,4 +570,203 @@ summary {
 
 summary:hover {
   color: #363636;
+}
+
+/* Code Container */
+.code-container {
+  position: relative;
+  margin: 0px 0px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+  
+.copy-button {
+  position: absolute;
+  top: 24px;
+  right: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+  
+.copy-button:hover {
+  opacity: 1;
+}
+  
+.copy-button .success-icon {
+  display: none;
+}
+
+.copy-button.copied .copy-icon {
+  display: none;
+}
+  
+.copy-button.copied .success-icon {
+  display: inline-block;
+}
+
+.code-container pre code {
+  font-size: 14px;
+}
+.code-container pre {
+  line-height: 1.4;
+}
+
+/* Image */
+img {
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+figcaption {
+  font-size: 13px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+figure {
+  margin: 12px 0px;
+  text-align: center;
+}
+
+/* Math Content */
+.math-content {
+  text-align: justify;
+  background: #f1f1f1;
+  padding: 6px 25px 6px 25px;
+  border-radius: 3px;
+  margin: 15px 0px;
+  max-width: 100%;
+}
+
+.math-content p {
+  font-size: 17px;
+  font-family: "cmu.serif-roman";
+}
+
+details.math-content {
+  user-select: auto;
+}
+
+/* Latex(Katex) */
+@font-face {
+  font-family: 'cmu.serif-roman';
+  src: url('/cmu.serif-roman.ttf') format('truetype');
+}
+
+.math-content .katex {
+  font-size: 0.95em !important;
+  font-weight: 200 !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+ .katex {
+  font-size: 1.1em !important;
+  font-weight: 200 !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Table */
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #333;
+}
+
+.data-table thead {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.data-table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.data-table th:first-child {
+    border-top-left-radius: 4px;
+}
+
+.data-table th:last-child {
+    border-top-right-radius: 4px;
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.data-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.data-table td {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+.data-table td:first-child {
+    color: #515151;
+    font-size: 15px;
+}
+
+.table-caption {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    padding: 5px 0px;
+    border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .data-table th {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .data-table td {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+    
+    .data-table th {
+        font-size: 13px;
+    }
+
+    .data-table td:first-child {
+    font-size: 13px;
+}
 }
