@@ -104,6 +104,12 @@ a {
   text-underline-offset: 4px;
 }
 
+a::selection {
+  text-decoration:underline lightgrey;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
 h1 {
   color: #000;
   clear: both;
@@ -358,9 +364,6 @@ footer a {
 ::selection {
   color: #000000;
   background: lightgrey;
-  text-decoration:underline lightgrey;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 4px;
 }
 
 .container-404 {
@@ -533,10 +536,20 @@ details {
   margin: 15px 0px;
   max-width: 850px;
   user-select: none;
+  text-decoration: none;
+}
+
+details::selection {
+  text-decoration: none;
 }
 
 .inner a {
   color: dimgrey;
+  text-decoration: none;
+}
+
+.inner a::selection {
+  text-decoration: none;
 }
 
 .inner a:hover {
