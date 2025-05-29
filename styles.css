@@ -98,12 +98,10 @@ li {
 }
   
 a {
-  color: #2A6EA6;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #F48C06;
+  color: #000000;
+  text-decoration:underline lightgrey;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
 }
 
 h1 {
@@ -353,13 +351,16 @@ footer a {
 }
 
 ::-moz-selection {
-  color: #ffffff;
-  background: #2A6EA6;
+  color: #000000;
+  background: lightgrey;
 }
 
 ::selection {
-  color: #ffffff;
-  background: #2A6EA6;
+  color: #000000;
+  background: lightgrey;
+  text-decoration:underline lightgrey;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
 }
 
 .container-404 {
