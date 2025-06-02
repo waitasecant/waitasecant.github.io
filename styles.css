@@ -73,6 +73,10 @@ body {
   padding-bottom: 60px;
 }
 
+[id] {
+  scroll-margin-top: 100px;
+}
+
 body.p404 {
   background-image: url("https://a.slack-edge.com/80588/img/404/marrakesh-meadow-80.jpg");
   background-size: cover;
