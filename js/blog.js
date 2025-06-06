@@ -159,6 +159,14 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log('All blog entries processed');
           createTagsFilterUI(Array.from(allTags).sort());
           removeTagsContainerIfNoVisibleEntries(); // Check if any entries are visible
+          const selectedTag = localStorage.getItem('selectedBlogTag');
+          if (selectedTag) {
+            localStorage.removeItem('selectedBlogTag');
+            const tagFilterElement = document.querySelector(`.filter-tag[data-tag="${selectedTag}"]`);
+            if (tagFilterElement) {
+              tagFilterElement.click();
+            }
+          }
         }
      })
       .catch(error => {
@@ -168,6 +176,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (loadedEntries === blogEntries.length) {
           createTagsFilterUI(Array.from(allTags).sort());
           removeTagsContainerIfNoVisibleEntries(); // Check if any entries are visible
+          const selectedTag = localStorage.getItem('selectedBlogTag');
+          if (selectedTag) {
+            localStorage.removeItem('selectedBlogTag');
+            const tagFilterElement = document.querySelector(`.filter-tag[data-tag="${selectedTag}"]`);
+            if (tagFilterElement) {
+              tagFilterElement.click();
+            }
+          }
         }
       });
     });
