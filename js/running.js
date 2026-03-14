@@ -70,13 +70,13 @@ function makeSquares(myList, dateLinks, squares, id, offset) {
 fetch('/running/data.json')
   .then(response => response.json())
   .then(data => {
-    const myList25 = data.myList25;
-    const dateLinks25 = data.dateLinks25;
-    const squares25 = document.querySelector('#run25 .squares'); 
-    makeSquares(myList25, dateLinks25, squares25, 'sum25', 2);
-
-    // const myList26 = data.myList26;
-    // const dateLinks26 = data.dateLinks26;
-    // const squares26 = document.querySelector('#run26 .squares'); 
-    // makeSquares(myList26, dateLinks26, squares26, 'sum26', 4);
+    const myList26 = data.myList26;
+    const dateLinks26 = data.dateLinks26;
+    const squares26 = document.querySelector('#run26 .squares'); 
+    makeSquares(myList26, dateLinks26, squares26, 'sum26', 4);
+  
+    // const myList27 = data.myList27;
+    // const dateLinks27 = data.dateLinks27;
+    // const squares27 = document.querySelector('#run27 .squares'); 
+    // makeSquares(myList27, dateLinks27, squares27, 'sum27', 2);
 });
