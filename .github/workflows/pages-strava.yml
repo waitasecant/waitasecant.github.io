@@ -1,6 +1,9 @@
 name: Build and Deploy Pages with Strava Data
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "30 18 * * *"
   workflow_dispatch:
