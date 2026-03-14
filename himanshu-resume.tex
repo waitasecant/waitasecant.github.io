@@ -1,0 +1,140 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{url}
+\usepackage{parskip} 	
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.86]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+\begin{document}
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{\textbf{HIMANSHU}} \\[7.5pt]
+\href{https://github.com/waitasecant}{\raisebox{-0.05\height}\faGithub\ waitasecant} \ $|$ \ 
+\href{https://linkedin.com/in/waitasecant}{\raisebox{-0.05\height}\faLinkedin\ waitasecant} \ $|$ \ 
+\href{https://waitasecant.github.io}{\raisebox{-0.05\height}\faGlobe \ waitasecant.github.io} \ $|$ \ 
+\href{mailto:waitasecant@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ waitasecant@gmail.com} \\
+\end{tabularx}
+
+% Summary
+\section{Summary}
+A \textbf{Machine Learning Engineer} with strong foundation in \textbf{Mathematics}, \textbf{Statistics}, and \textbf{Machine Learning} with hands-on experience building \textbf{agentic applications} and a knack for problem solving and attention to detail.
+
+% Work Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{HP Inc. $\mid$ Machine Learning Engineer} & \hfill \textbf{Jun'25 - Present} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item \textbf{Led} the development of an internal \textbf{python library} providing \textbf{Authorization Middleware} for python services.
+        \item \textbf{Built} multiple \textbf{end-to-end} agentic reference services with \textbf{Strands, LangGraph, Google ADK} implementing various \textbf{orchestration patterns} with \textbf{A2A} integration as an additional head start for other teams.
+    \end{itemize}
+    \end{minipage}
+}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Roni Analytics LLP $\mid$ Data Analyst Intern} & \hfill \textbf{May'24 - Aug'24} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item \textbf{Implemented} production-grade cron jobs to quantify granular \& token level \textbf{TVL} for Pendle \& Kelp protocols.
+        \item \textbf{Migrated} the \textbf{on-chain data pipelines} to \textbf{Dune}, \textbf{validated} using \textbf{DelfiLlama} ensuring data integrity.
+        \item \textbf{Implemented} multi-threaded \textbf{websocket} solution to track and process \textbf{Bybit} order and tradebooks data to compute granular volume metrics for bid-ask and buy-sell analysis for spot and futures trading.
+    \end{itemize}
+    \end{minipage}
+}  \\
+\end{tabularx}
+
+% Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Real-Time Air Pollution Dashboard} & \hfill \href{https://github.com/waitasecant/Air-Pollution-Dashboard}{\textbf{github}} \href{https://waitasecant.shinyapps.io/myapp}{\textbf{dashboard}} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item \textbf{Automated data pipeline} to scrape, prepare, validate data for 24 stations in Delhi using \textbf{GitHub Actions}.
+        \item \textbf{Feature engineered} AQI using \textbf{regression tree} with RMSE 3.79 trained on two year data corpus.
+        \item \textbf{Developed} an \textbf{R-Shiny} dashboard hosting monthly \textbf{choropleth maps}, \textbf{real-time} time series plots.
+        \item Built an automated \textbf{twitter bot} using \textbf{tweepy} on top of the dashboard tweeting air quality updates.
+    \end{itemize}
+    \end{minipage}
+}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{ArXiv-Intelligence: RAG Chatbot} & \hfill \href{https://github.com/U1Kemp/RAG-powered-search-engine-for-Research/}{\textbf{github}}\\
+\multicolumn{2}{@{}X@{}}{\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item \textbf{Developed} a \textbf{RAG} chatbot assisting in summarizing latest developments in research using \textbf{ArXiv API}.
+        \item \textbf{Implemented} keyword extraction from query using \textbf{KeyBERT} with additional context from \textbf{Wikipedia}.
+        \item \textbf{Retrieved} chunks using \textbf{Qdrant} database, summarized and passed to \textbf{Gemini 2.0 Flash} for generation.
+    \end{itemize}
+    \end{minipage}
+}  \\
+\end{tabularx}
+
+% SKILLS
+\section{Skills}
+
+\begin{tabularx}{\linewidth}{ @{}l X@{} }
+\textbf{Languages \& Tools}\normalsize{: Python, Julia, R, SQL $\mid$ Git, Docker, DVC, Databricks, Datadog, MLFlow} & \hfill {}\\
+\textbf{Libraries \& Frameworks}\normalsize{: PyTorch, PySpark, A2A, MCP, Strands, LangGraph $\mid$ Flask, Streamlit, Gradio, Shiny} & \hfill {}\\
+\end{tabularx}
+
+%Hackathons
+\section{Open Source \& Hackathons}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item \textbf{modis-tools}\normalsize{: A Python library to download MODIS data from the NASA Earthdata.} \hfill \href{https://github.com/fraymio/modis-tools/pull/49}{\textbf{Link to PR}}
+        \item \textbf{strands-agents}\normalsize{: A model-driven approach to building AI agents in just a few lines of code.} \hfill \href{https://github.com/strands-agents/sdk-python/pull/846}{\textbf{Link to PR}}
+        \item \textbf{AmEx Campus Challenge 2024-Decision Track:} Ranked 4 in the Economics/Statistics cohort.
+    \end{itemize}
+    \end{minipage}
+}  \\
+\end{tabularx}
+
+% Education
+\section{Education}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+\textbf{Chennai Mathematical Institute} & \hfill \textbf{2023-25} \\
+\textit{M.Sc. Data Science} & \hfill  CGPA: 7.91\\ \\
+
+\textbf{Institute of Chemical Technology} & \hfill \textbf{2021-23} \\
+\textit{M.Sc. Engineering Mathematics} & \hfill  CGPA: 8.46\\ \\
+
+\textbf{Sri Venkateswara College, University of Delhi} & \hfill \textbf{2018-21} \\
+\textit{B.Sc. (Hons.) Mathematics; Minor: Physics} & \hfill  CGPA: 8.29
+\end{tabularx}
+\end{document}
