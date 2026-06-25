@@ -34,10 +34,13 @@ jobs:
         with:
           root_file: main.tex
 
+      - name: Rename PDF
+        run: mv main.pdf resume.pdf
+
       - name: Upload PDF to Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: resume.pdf
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
