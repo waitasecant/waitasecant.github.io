@@ -32,12 +32,12 @@ jobs:
       - name: Compile LaTeX resume
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: himanshu-resume.tex
+          root_file: main.tex
 
       - name: Upload PDF to Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: resume.pdf
 
       - name: Deploy to GitHub Pages
         id: deployment
