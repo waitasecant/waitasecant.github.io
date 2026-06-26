@@ -1,17 +1,15 @@
-name: Build and Deploy Pages with Strava Data
+name: Fetch Strava Data
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: "30 18 * * *"
+    - cron: "0 18 1 * *"
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: pages
@@ -28,6 +26,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Download previous site state
+        uses: dawidd6/action-download-artifact@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          name: site-state
+          path: .
+          search_artifacts: true
+        continue-on-error: true
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -42,6 +49,15 @@ jobs:
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
           STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         run: python running/fetch_strava.py $(date +%Y)
+
+      - name: Upload updated site state
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-state
+          path: |
+            resume.pdf
+            running/data.json
+          if-no-files-found: warn
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

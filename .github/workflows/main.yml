@@ -1,12 +1,12 @@
-name: Build Resume
+name: Deploy Pages
 
 on:
   push:
     branches:
       - main
-    paths:
+    paths-ignore:
       - '*.tex'
-      - '.github/workflows/build-resume.yml'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
@@ -38,21 +38,6 @@ jobs:
           path: .
           search_artifacts: true
         continue-on-error: true
-
-      - name: Compile LaTeX resume
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: main.tex
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=resume
-
-      - name: Upload updated site state
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-state
-          path: |
-            resume.pdf
-            running/data.json
-          if-no-files-found: warn
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
